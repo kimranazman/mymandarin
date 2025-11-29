@@ -1,0 +1,132 @@
+{
+  "vocabulary": {
+    "family": [
+      {
+        "pinyin": "ér zi",
+        "characters": "儿子",
+        "meaning": "son",
+        "notes": "儿 (child) + 子 (child/son). Uses both child characters together for emphasis.",
+        "components": ["儿", "子"]
+      },
+      {
+        "pinyin": "nǚ ér",
+        "characters": "女儿",
+        "meaning": "daughter",
+        "notes": "女 (female) + 儿 (child). Literally 'female child'.",
+        "components": ["女", "儿"]
+      },
+      {
+        "pinyin": "ér",
+        "characters": "儿",
+        "meaning": "child",
+        "notes": "Pictograph of a person with an open fontanelle (soft spot on baby's head), representing an infant."
+      },
+      {
+        "pinyin": "zǐ",
+        "characters": "子",
+        "meaning": "child/son",
+        "notes": "Pictograph of a swaddled baby. One of the most common character components in Chinese."
+      },
+      {
+        "pinyin": "nǚ",
+        "characters": "女",
+        "meaning": "female/woman",
+        "notes": "Pictograph of a kneeling woman with crossed arms. A fundamental radical in many characters."
+      }
+    ],
+    "numbers": [
+      {
+        "pinyin": "èr",
+        "characters": "二",
+        "meaning": "two",
+        "notes": "Simple representation: two horizontal lines for the number 2."
+      },
+      {
+        "pinyin": "shù",
+        "characters": "数",
+        "meaning": "number/to count",
+        "notes": "Complex character combining phonetic 娄 (lóu) with 攵 (action radical). The action radical suggests counting/tapping."
+      }
+    ],
+    "education": [
+      {
+        "pinyin": "xué",
+        "characters": "学",
+        "meaning": "study/learn",
+        "notes": "Contains 子 (child) at the bottom. Represents hands teaching knowledge to a child under a roof.",
+        "components": ["子"]
+      },
+      {
+        "pinyin": "shùxué",
+        "characters": "数学",
+        "meaning": "math",
+        "notes": "数 (number) + 学 (study). Literally 'number study' = mathematics.",
+        "components": ["数", "学"]
+      },
+      {
+        "pinyin": "xuéshēng",
+        "characters": "学生",
+        "meaning": "student",
+        "notes": "学 (study) + 生 (life/person). A 'study-person' = student.",
+        "components": ["学", "生"]
+      },
+      {
+        "pinyin": "lǎoshī",
+        "characters": "老师",
+        "meaning": "teacher",
+        "notes": "老 (old/respected) + 师 (master). A 'respected master' = teacher.",
+        "components": ["老", "师"]
+      }
+    ],
+    "professions": [
+      {
+        "pinyin": "yīshēng",
+        "characters": "医生",
+        "meaning": "doctor",
+        "notes": "医 (medicine) + 生 (life). One who deals with life/healing.",
+        "components": ["医", "生"]
+      },
+      {
+        "pinyin": "lǜshī",
+        "characters": "律师",
+        "meaning": "lawyer",
+        "notes": "律 (law) + 师 (master). A 'law master' = lawyer.",
+        "components": ["律", "师"]
+      },
+      {
+        "pinyin": "shī",
+        "characters": "师",
+        "meaning": "master/expert",
+        "notes": "Used as a suffix for many professions: 厨师 (chef), 工程师 (engineer), 设计师 (designer)."
+      }
+    ],
+    "medicine": [
+      {
+        "pinyin": "yī",
+        "characters": "医",
+        "meaning": "medicine",
+        "notes": "Simplified from 醫. Originally showed arrows in a quiver (treating arrow wounds) and a wine vessel (for sterilization)."
+      }
+    ],
+    "common_components": [
+      {
+        "pinyin": "shēng",
+        "characters": "生",
+        "meaning": "life/birth/person",
+        "notes": "Pictograph of a plant sprouting from the ground. Core meaning: life, birth, to grow. Used in many compound words."
+      },
+      {
+        "pinyin": "lǎo",
+        "characters": "老",
+        "meaning": "old/respected",
+        "notes": "Shows an elderly person with long hair and a cane. Conveys both age and respect."
+      },
+      {
+        "pinyin": "lǜ",
+        "characters": "律",
+        "meaning": "law",
+        "notes": "Contains 彳(step radical) suggesting regulated movement/behavior, and 聿 (writing brush) for written rules."
+      }
+    ]
+  }
+}
