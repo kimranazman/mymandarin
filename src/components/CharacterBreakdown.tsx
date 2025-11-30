@@ -11,7 +11,7 @@ export function CharacterBreakdown({ word, relatedWords, onClose }: CharacterBre
   return (
     <div className="breakdown-overlay" onClick={onClose}>
       <div className="breakdown-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>×</button>
+        <button className="close-btn" onClick={onClose} aria-label="Close">×</button>
 
         <div className="breakdown-header">
           <span className="breakdown-character">{word.characters}</span>
@@ -61,8 +61,10 @@ export function CharacterBreakdown({ word, relatedWords, onClose }: CharacterBre
               {relatedWords.map((related) => (
                 <div key={related.pinyin} className="related-word">
                   <span className="related-char">{related.characters}</span>
-                  <span className="related-pinyin">{related.pinyin}</span>
-                  <span className="related-meaning">{related.meaning}</span>
+                  <div className="related-info">
+                    <span className="related-pinyin">{related.pinyin}</span>
+                    <span className="related-meaning">{related.meaning}</span>
+                  </div>
                 </div>
               ))}
             </div>
