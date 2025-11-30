@@ -74,6 +74,14 @@
   50% { transform: translateY(-10px); }
 }
 
+/* Root container */
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 /* Base Reset & Styles */
 *, *::before, *::after {
   box-sizing: border-box;
