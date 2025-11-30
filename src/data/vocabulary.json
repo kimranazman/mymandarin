@@ -32,6 +32,34 @@
         "characters": "女",
         "meaning": "female/woman",
         "notes": "Pictograph of a kneeling woman with crossed arms. A fundamental radical in many characters."
+      },
+      {
+        "pinyin": "māma",
+        "characters": "妈妈",
+        "meaning": "mom/mother",
+        "notes": "Reduplication of 妈 (ma). The character contains 女 (woman) + 马 (horse) as phonetic component.",
+        "components": ["女", "马"]
+      },
+      {
+        "pinyin": "bàba",
+        "characters": "爸爸",
+        "meaning": "dad/father",
+        "notes": "Reduplication of 爸 (ba). Contains 父 (father) + 巴 as phonetic component.",
+        "components": ["父", "巴"]
+      },
+      {
+        "pinyin": "lǎogōng",
+        "characters": "老公",
+        "meaning": "husband",
+        "notes": "老 (old/dear) + 公 (male). Informal/affectionate term for husband.",
+        "components": ["老", "公"]
+      },
+      {
+        "pinyin": "lǎopó",
+        "characters": "老婆",
+        "meaning": "wife",
+        "notes": "老 (old/dear) + 婆 (woman). Informal/affectionate term for wife.",
+        "components": ["老", "婆"]
       }
     ],
     "numbers": [
@@ -76,6 +104,20 @@
         "meaning": "teacher",
         "notes": "老 (old/respected) + 师 (master). A 'respected master' = teacher.",
         "components": ["老", "师"]
+      },
+      {
+        "pinyin": "zhōngxuéshēng",
+        "characters": "中学生",
+        "meaning": "middle school student",
+        "notes": "中 (middle) + 学生 (student). A student in middle/high school.",
+        "components": ["中", "学", "生"]
+      },
+      {
+        "pinyin": "dàxuéshēng",
+        "characters": "大学生",
+        "meaning": "college student",
+        "notes": "大 (big) + 学生 (student). A university/college student.",
+        "components": ["大", "学", "生"]
       }
     ],
     "professions": [
@@ -106,6 +148,124 @@
         "characters": "医",
         "meaning": "medicine",
         "notes": "Simplified from 醫. Originally showed arrows in a quiver (treating arrow wounds) and a wine vessel (for sterilization)."
+      }
+    ],
+    "countries": [
+      {
+        "pinyin": "zhōngguó",
+        "characters": "中国",
+        "meaning": "China",
+        "notes": "中 (middle/center) + 国 (country). The 'Middle Kingdom'.",
+        "components": ["中", "国"]
+      },
+      {
+        "pinyin": "měiguó",
+        "characters": "美国",
+        "meaning": "America/USA",
+        "notes": "美 (beautiful) + 国 (country). Phonetic translation of 'America'.",
+        "components": ["美", "国"]
+      },
+      {
+        "pinyin": "rìběn",
+        "characters": "日本",
+        "meaning": "Japan",
+        "notes": "日 (sun) + 本 (origin). 'Origin of the sun' - Japan is east of China where the sun rises.",
+        "components": ["日", "本"]
+      },
+      {
+        "pinyin": "guó",
+        "characters": "国",
+        "meaning": "country/nation",
+        "notes": "Simplified from 國. Shows 玉 (jade/treasure) inside 囗 (enclosure) - protecting what's valuable."
+      }
+    ],
+    "basic_words": [
+      {
+        "pinyin": "shì",
+        "characters": "是",
+        "meaning": "is/am/are",
+        "notes": "The main verb 'to be' in Chinese. One of the most common characters."
+      },
+      {
+        "pinyin": "zhè shì",
+        "characters": "这是",
+        "meaning": "this is",
+        "notes": "这 (this) + 是 (is). Used to introduce or point to something.",
+        "components": ["这", "是"]
+      },
+      {
+        "pinyin": "zhè",
+        "characters": "这",
+        "meaning": "this",
+        "notes": "Demonstrative pronoun for something close/nearby."
+      },
+      {
+        "pinyin": "rén",
+        "characters": "人",
+        "meaning": "person/people",
+        "notes": "Pictograph of a person walking. One of the most fundamental characters in Chinese."
+      },
+      {
+        "pinyin": "bù",
+        "characters": "不",
+        "meaning": "not/don't",
+        "notes": "Negation word. Tone changes to 2nd tone before 4th tone words."
+      }
+    ],
+    "food_and_drink": [
+      {
+        "pinyin": "mǐfàn",
+        "characters": "米饭",
+        "meaning": "rice (cooked)",
+        "notes": "米 (rice grain) + 饭 (meal/food). Specifically refers to cooked rice.",
+        "components": ["米", "饭"]
+      },
+      {
+        "pinyin": "fànguǎn",
+        "characters": "饭馆",
+        "meaning": "restaurant",
+        "notes": "饭 (meal) + 馆 (building/hall). A place to eat meals.",
+        "components": ["饭", "馆"]
+      },
+      {
+        "pinyin": "shuǐ",
+        "characters": "水",
+        "meaning": "water",
+        "notes": "Pictograph of flowing water. One of the most common radicals in Chinese."
+      },
+      {
+        "pinyin": "chá",
+        "characters": "茶",
+        "meaning": "tea",
+        "notes": "Contains 艹 (grass radical) on top, indicating it's a plant. Tea originated in China."
+      }
+    ],
+    "adjectives": [
+      {
+        "pinyin": "rè",
+        "characters": "热",
+        "meaning": "hot",
+        "notes": "Simplified from 熱. Contains 火 (fire) at the bottom, indicating heat."
+      },
+      {
+        "pinyin": "dà",
+        "characters": "大",
+        "meaning": "big/large",
+        "notes": "Pictograph of a person with arms spread wide to show size."
+      },
+      {
+        "pinyin": "zhōng",
+        "characters": "中",
+        "meaning": "middle/center",
+        "notes": "Shows a line through the center of a rectangle, indicating the middle."
+      }
+    ],
+    "adverbs": [
+      {
+        "pinyin": "chángcháng",
+        "characters": "常常",
+        "meaning": "often/frequently",
+        "notes": "Reduplication of 常 (often). Emphasizes frequency of action."
       }
     ],
     "common_components": [

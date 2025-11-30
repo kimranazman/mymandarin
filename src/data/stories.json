@@ -1,0 +1,202 @@
+{
+  "stories": [
+    {
+      "id": "family-dinner",
+      "title": "Family Dinner",
+      "titleChinese": "家人吃饭",
+      "level": "beginner",
+      "wordCount": 8,
+      "sentences": [
+        {
+          "chinese": "这是妈妈。",
+          "pinyin": "Zhè shì māma.",
+          "english": "This is mom.",
+          "words": ["zhè shì", "māma"]
+        },
+        {
+          "chinese": "这是爸爸。",
+          "pinyin": "Zhè shì bàba.",
+          "english": "This is dad.",
+          "words": ["zhè shì", "bàba"]
+        },
+        {
+          "chinese": "妈妈常常热米饭。",
+          "pinyin": "Māma chángcháng rè mǐfàn.",
+          "english": "Mom often heats rice.",
+          "words": ["māma", "chángcháng", "rè", "mǐfàn"]
+        },
+        {
+          "chinese": "爸爸常常热水。",
+          "pinyin": "Bàba chángcháng rè shuǐ.",
+          "english": "Dad often heats water.",
+          "words": ["bàba", "chángcháng", "rè", "shuǐ"]
+        }
+      ]
+    },
+    {
+      "id": "tea-time",
+      "title": "Tea Time",
+      "titleChinese": "喝茶",
+      "level": "beginner",
+      "wordCount": 6,
+      "sentences": [
+        {
+          "chinese": "老公热水。",
+          "pinyin": "Lǎogōng rè shuǐ.",
+          "english": "Husband heats water.",
+          "words": ["lǎogōng", "rè", "shuǐ"]
+        },
+        {
+          "chinese": "老婆热茶。",
+          "pinyin": "Lǎopó rè chá.",
+          "english": "Wife heats tea.",
+          "words": ["lǎopó", "rè", "chá"]
+        },
+        {
+          "chinese": "这是热茶。",
+          "pinyin": "Zhè shì rè chá.",
+          "english": "This is hot tea.",
+          "words": ["zhè shì", "rè", "chá"]
+        }
+      ]
+    },
+    {
+      "id": "the-student",
+      "title": "The Student",
+      "titleChinese": "学生",
+      "level": "beginner",
+      "wordCount": 10,
+      "sentences": [
+        {
+          "chinese": "儿子是大学生。",
+          "pinyin": "Érzi shì dàxuéshēng.",
+          "english": "Son is a college student.",
+          "words": ["ér zi", "shì", "dàxuéshēng"]
+        },
+        {
+          "chinese": "女儿是中学生。",
+          "pinyin": "Nǚér shì zhōngxuéshēng.",
+          "english": "Daughter is a middle school student.",
+          "words": ["nǚ ér", "shì", "zhōngxuéshēng"]
+        },
+        {
+          "chinese": "老师不是学生。",
+          "pinyin": "Lǎoshī bù shì xuéshēng.",
+          "english": "Teacher is not a student.",
+          "words": ["lǎoshī", "bù", "shì", "xuéshēng"]
+        },
+        {
+          "chinese": "学生常常学数学。",
+          "pinyin": "Xuéshēng chángcháng xué shùxué.",
+          "english": "Students often study math.",
+          "words": ["xuéshēng", "chángcháng", "xué", "shùxué"]
+        }
+      ]
+    },
+    {
+      "id": "at-the-restaurant",
+      "title": "At the Restaurant",
+      "titleChinese": "在饭馆",
+      "level": "beginner",
+      "wordCount": 9,
+      "sentences": [
+        {
+          "chinese": "这是饭馆。",
+          "pinyin": "Zhè shì fànguǎn.",
+          "english": "This is a restaurant.",
+          "words": ["zhè shì", "fànguǎn"]
+        },
+        {
+          "chinese": "妈妈热米饭。",
+          "pinyin": "Māma rè mǐfàn.",
+          "english": "Mom heats rice.",
+          "words": ["māma", "rè", "mǐfàn"]
+        },
+        {
+          "chinese": "爸爸热茶。",
+          "pinyin": "Bàba rè chá.",
+          "english": "Dad heats tea.",
+          "words": ["bàba", "rè", "chá"]
+        },
+        {
+          "chinese": "水不热。",
+          "pinyin": "Shuǐ bù rè.",
+          "english": "The water is not hot.",
+          "words": ["shuǐ", "bù", "rè"]
+        }
+      ]
+    },
+    {
+      "id": "people-of-the-world",
+      "title": "People of the World",
+      "titleChinese": "人",
+      "level": "beginner",
+      "wordCount": 8,
+      "sentences": [
+        {
+          "chinese": "这是中国人。",
+          "pinyin": "Zhè shì Zhōngguó rén.",
+          "english": "This is a Chinese person.",
+          "words": ["zhè shì", "zhōngguó", "rén"]
+        },
+        {
+          "chinese": "这是美国人。",
+          "pinyin": "Zhè shì Měiguó rén.",
+          "english": "This is an American person.",
+          "words": ["zhè shì", "měiguó", "rén"]
+        },
+        {
+          "chinese": "这是日本人。",
+          "pinyin": "Zhè shì Rìběn rén.",
+          "english": "This is a Japanese person.",
+          "words": ["zhè shì", "rìběn", "rén"]
+        },
+        {
+          "chinese": "老师是中国人。",
+          "pinyin": "Lǎoshī shì Zhōngguó rén.",
+          "english": "The teacher is Chinese.",
+          "words": ["lǎoshī", "shì", "zhōngguó", "rén"]
+        }
+      ]
+    },
+    {
+      "id": "my-family",
+      "title": "My Family",
+      "titleChinese": "我的家人",
+      "level": "beginner",
+      "wordCount": 12,
+      "sentences": [
+        {
+          "chinese": "妈妈是医生。",
+          "pinyin": "Māma shì yīshēng.",
+          "english": "Mom is a doctor.",
+          "words": ["māma", "shì", "yīshēng"]
+        },
+        {
+          "chinese": "爸爸是律师。",
+          "pinyin": "Bàba shì lǜshī.",
+          "english": "Dad is a lawyer.",
+          "words": ["bàba", "shì", "lǜshī"]
+        },
+        {
+          "chinese": "儿子是大学生。",
+          "pinyin": "Érzi shì dàxuéshēng.",
+          "english": "Son is a college student.",
+          "words": ["ér zi", "shì", "dàxuéshēng"]
+        },
+        {
+          "chinese": "女儿不是学生。",
+          "pinyin": "Nǚér bù shì xuéshēng.",
+          "english": "Daughter is not a student.",
+          "words": ["nǚ ér", "bù", "shì", "xuéshēng"]
+        },
+        {
+          "chinese": "女儿是老师。",
+          "pinyin": "Nǚér shì lǎoshī.",
+          "english": "Daughter is a teacher.",
+          "words": ["nǚ ér", "shì", "lǎoshī"]
+        }
+      ]
+    }
+  ]
+}

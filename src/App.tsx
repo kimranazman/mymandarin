@@ -5,11 +5,12 @@ import { Quiz } from './components/Quiz';
 import { WordList } from './components/WordList';
 import { CharacterBreakdown } from './components/CharacterBreakdown';
 import { Statistics } from './components/Statistics';
-import { IconHome, IconCards, IconQuiz, IconBook, IconStats } from './components/Icons';
+import { Readables } from './components/Readables';
+import { IconHome, IconCards, IconQuiz, IconBook, IconStats, IconRead } from './components/Icons';
 import type { WordWithCategory, QuizMode } from './types/vocabulary';
 import './App.css';
 
-type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'stats';
+type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'read' | 'stats';
 
 function App() {
   const [view, setView] = useState<View>('home');
@@ -103,6 +104,7 @@ function App() {
     { id: 'home', label: 'Home', icon: IconHome },
     { id: 'flashcards', label: 'Cards', icon: IconCards },
     { id: 'quiz', label: 'Quiz', icon: IconQuiz },
+    { id: 'read', label: 'Read', icon: IconRead },
     { id: 'words', label: 'Library', icon: IconBook },
     { id: 'stats', label: 'Stats', icon: IconStats, badge: wordsForReview.length > 0 ? wordsForReview.length : undefined },
   ];
@@ -275,6 +277,15 @@ function App() {
             title="All Words"
             getProgress={getWordProgress}
             onWordClick={setSelectedWord}
+          />
+        )}
+
+        {view === 'read' && (
+          <Readables
+            onWordClick={(pinyin) => {
+              const word = allWords.find((w) => w.pinyin.toLowerCase() === pinyin.toLowerCase());
+              if (word) setSelectedWord(word);
+            }}
           />
         )}
 
