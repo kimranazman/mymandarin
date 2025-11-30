@@ -57,6 +57,7 @@ export function Quiz({ words, categories, onResult, onComplete, onExit }: QuizPr
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedMode, setSelectedMode] = useState<QuizMode>('character-to-meaning');
   const [selectedDifficulty, setSelectedDifficulty] = useState<QuizDifficulty>('easy');
+  const [questionCount, setQuestionCount] = useState<number>(10);
 
   // Quiz state
   const [phase, setPhase] = useState<QuizPhase>('settings');
@@ -110,9 +111,13 @@ export function Quiz({ words, categories, onResult, onComplete, onExit }: QuizPr
     const filteredWords = getFilteredWords();
     if (filteredWords.length < 4) return;
 
+    // Limit to selected question count
+    const shuffled = shuffleArray(filteredWords);
+    const limited = shuffled.slice(0, Math.min(questionCount, shuffled.length));
+
     setScore({ correct: 0, incorrect: 0, firstAttempt: 0, secondAttempt: 0 });
     setCurrentIndex(0);
-    setQuizWords(shuffleArray(filteredWords));
+    setQuizWords(limited);
     setStartTime(Date.now());
     setReviewedWords([]);
     setPhase('playing');
@@ -309,11 +314,31 @@ export function Quiz({ words, categories, onResult, onComplete, onExit }: QuizPr
           </div>
         </div>
 
+        {/* Question Count */}
+        <div className="settings-section">
+          <h3>Questions: {Math.min(questionCount, filteredWords.length)}</h3>
+          <div className="question-slider-container">
+            <input
+              type="range"
+              min="5"
+              max={Math.max(filteredWords.length, 5)}
+              value={Math.min(questionCount, filteredWords.length)}
+              onChange={(e) => setQuestionCount(Number(e.target.value))}
+              className="question-slider"
+            />
+            <div className="slider-labels">
+              <span>5</span>
+              <span>{filteredWords.length >= 10 ? '10' : ''}</span>
+              <span>{filteredWords.length}</span>
+            </div>
+          </div>
+        </div>
+
         {/* Start Button */}
         <div className="settings-actions">
           {filteredWords.length >= 4 ? (
             <button className="btn-start-quiz" onClick={startQuiz}>
-              Start Quiz ({filteredWords.length} words)
+              Start Quiz ({Math.min(questionCount, filteredWords.length)} questions)
             </button>
           ) : (
             <p className="settings-warning">
