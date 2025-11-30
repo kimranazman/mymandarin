@@ -118,6 +118,33 @@
         "meaning": "college student",
         "notes": "大 (big) + 学生 (student). A university/college student.",
         "components": ["大", "学", "生"]
+      },
+      {
+        "pinyin": "shàng kè",
+        "characters": "上课",
+        "meaning": "attend class",
+        "notes": "上 (up/attend) + 课 (class). To go to class or start a lesson.",
+        "components": ["上", "课"]
+      },
+      {
+        "pinyin": "kè",
+        "characters": "课",
+        "meaning": "class/lesson",
+        "notes": "言 (speech) + 果 (fruit/result). A lesson produces results through words."
+      },
+      {
+        "pinyin": "yīngyǔ",
+        "characters": "英语",
+        "meaning": "English (language)",
+        "notes": "英 (England) + 语 (language). The English language.",
+        "components": ["英", "语"]
+      },
+      {
+        "pinyin": "yīnyuè",
+        "characters": "音乐",
+        "meaning": "music",
+        "notes": "音 (sound) + 乐 (joy/music). Sound that brings joy.",
+        "components": ["音", "乐"]
       }
     ],
     "professions": [
@@ -173,10 +200,49 @@
         "components": ["日", "本"]
       },
       {
+        "pinyin": "hánguó",
+        "characters": "韩国",
+        "meaning": "South Korea",
+        "notes": "韩 (Korea) + 国 (country). The Korean peninsula.",
+        "components": ["韩", "国"]
+      },
+      {
         "pinyin": "guó",
         "characters": "国",
         "meaning": "country/nation",
         "notes": "Simplified from 國. Shows 玉 (jade/treasure) inside 囗 (enclosure) - protecting what's valuable."
+      }
+    ],
+    "pronouns": [
+      {
+        "pinyin": "wǒ",
+        "characters": "我",
+        "meaning": "I/me",
+        "notes": "First person singular pronoun. One of the most essential words in Chinese."
+      },
+      {
+        "pinyin": "nǐ",
+        "characters": "你",
+        "meaning": "you",
+        "notes": "Second person singular pronoun. Contains 人 (person) radical."
+      },
+      {
+        "pinyin": "tā",
+        "characters": "他",
+        "meaning": "he/him",
+        "notes": "Third person masculine pronoun. 人 (person) + 也 phonetic."
+      },
+      {
+        "pinyin": "tā",
+        "characters": "她",
+        "meaning": "she/her",
+        "notes": "Third person feminine pronoun. 女 (woman) + 也 phonetic. Same pronunciation as 他."
+      },
+      {
+        "pinyin": "de",
+        "characters": "的",
+        "meaning": "possessive particle ('s)",
+        "notes": "Most common character in Chinese. Shows possession: 我的 (my), 你的 (your)."
       }
     ],
     "basic_words": [
@@ -210,6 +276,32 @@
         "characters": "不",
         "meaning": "not/don't",
         "notes": "Negation word. Tone changes to 2nd tone before 4th tone words."
+      },
+      {
+        "pinyin": "hé",
+        "characters": "和",
+        "meaning": "and/with",
+        "notes": "Conjunction meaning 'and'. Also means harmony/peace."
+      },
+      {
+        "pinyin": "duì",
+        "characters": "对",
+        "meaning": "correct/right",
+        "notes": "Used to confirm something is correct. Also means 'towards' or 'pair'."
+      },
+      {
+        "pinyin": "duì bu duì",
+        "characters": "对不对",
+        "meaning": "right? / isn't it?",
+        "notes": "对 (correct) + 不 (not) + 对 (correct). Tag question asking for confirmation.",
+        "components": ["对", "不", "对"]
+      },
+      {
+        "pinyin": "nǐ ne",
+        "characters": "你呢",
+        "meaning": "how about you?",
+        "notes": "你 (you) + 呢 (question particle). Used to ask 'and you?' or 'what about you?'",
+        "components": ["你", "呢"]
       }
     ],
     "food_and_drink": [
@@ -238,6 +330,75 @@
         "characters": "茶",
         "meaning": "tea",
         "notes": "Contains 艹 (grass radical) on top, indicating it's a plant. Tea originated in China."
+      },
+      {
+        "pinyin": "kāfēi",
+        "characters": "咖啡",
+        "meaning": "coffee",
+        "notes": "Phonetic translation of 'coffee'. Both characters have 口 (mouth) radical.",
+        "components": ["咖", "啡"]
+      },
+      {
+        "pinyin": "zhōu",
+        "characters": "粥",
+        "meaning": "porridge/congee",
+        "notes": "Rice porridge. 米 (rice) + 弓弓 phonetic. A staple breakfast food."
+      },
+      {
+        "pinyin": "tāng",
+        "characters": "汤",
+        "meaning": "soup",
+        "notes": "氵(water radical) indicates liquid. Soup is an essential part of Chinese meals."
+      },
+      {
+        "pinyin": "dòufu",
+        "characters": "豆腐",
+        "meaning": "tofu",
+        "notes": "豆 (bean) + 腐 (curdled). Bean curd, a protein-rich food.",
+        "components": ["豆", "腐"]
+      },
+      {
+        "pinyin": "cài",
+        "characters": "菜",
+        "meaning": "dish/cuisine/vegetable",
+        "notes": "艹 (grass/plant radical) on top. Can mean vegetables or a cooked dish."
+      }
+    ],
+    "places": [
+      {
+        "pinyin": "chāoshì",
+        "characters": "超市",
+        "meaning": "supermarket",
+        "notes": "超 (super/exceed) + 市 (market). A large market/store.",
+        "components": ["超", "市"]
+      },
+      {
+        "pinyin": "shūdiàn",
+        "characters": "书店",
+        "meaning": "bookstore",
+        "notes": "书 (book) + 店 (store). A place that sells books.",
+        "components": ["书", "店"]
+      }
+    ],
+    "verbs": [
+      {
+        "pinyin": "qù",
+        "characters": "去",
+        "meaning": "to go",
+        "notes": "One of the most common verbs. Shows movement away from speaker."
+      },
+      {
+        "pinyin": "chī",
+        "characters": "吃",
+        "meaning": "to eat",
+        "notes": "口 (mouth) radical on the left indicates eating action."
+      },
+      {
+        "pinyin": "xǐhuan",
+        "characters": "喜欢",
+        "meaning": "to like",
+        "notes": "喜 (joy) + 欢 (happy). To be fond of something.",
+        "components": ["喜", "欢"]
       }
     ],
     "adjectives": [
