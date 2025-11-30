@@ -1,45 +1,318 @@
 {
   "stories": [
     {
-      "id": "family-dinner",
-      "title": "Family Dinner",
-      "titleChinese": "家人吃饭",
+      "id": "my-family",
+      "title": "My Family",
+      "titleChinese": "我的家人",
       "level": "beginner",
-      "wordCount": 8,
+      "wordCount": 18,
       "sentences": [
         {
-          "chinese": "这是妈妈。",
-          "pinyin": "Zhè shì māma.",
-          "english": "This is mom.",
-          "words": ["zhè shì", "māma"]
+          "chinese": "这是我的妈妈。",
+          "pinyin": "Zhè shì wǒ de māma.",
+          "english": "This is my mom.",
+          "words": ["zhè shì", "wǒ", "de", "māma"]
         },
         {
-          "chinese": "这是爸爸。",
-          "pinyin": "Zhè shì bàba.",
-          "english": "This is dad.",
-          "words": ["zhè shì", "bàba"]
+          "chinese": "她是医生。",
+          "pinyin": "Tā shì yīshēng.",
+          "english": "She is a doctor.",
+          "words": ["tā", "shì", "yīshēng"]
         },
         {
-          "chinese": "妈妈常常热米饭。",
-          "pinyin": "Māma chángcháng rè mǐfàn.",
-          "english": "Mom often heats rice.",
-          "words": ["māma", "chángcháng", "rè", "mǐfàn"]
+          "chinese": "这是我的爸爸。",
+          "pinyin": "Zhè shì wǒ de bàba.",
+          "english": "This is my dad.",
+          "words": ["zhè shì", "wǒ", "de", "bàba"]
         },
         {
-          "chinese": "爸爸常常热水。",
-          "pinyin": "Bàba chángcháng rè shuǐ.",
-          "english": "Dad often heats water.",
-          "words": ["bàba", "chángcháng", "rè", "shuǐ"]
+          "chinese": "他是律师。",
+          "pinyin": "Tā shì lǜshī.",
+          "english": "He is a lawyer.",
+          "words": ["tā", "shì", "lǜshī"]
+        },
+        {
+          "chinese": "我的儿子是大学生。",
+          "pinyin": "Wǒ de érzi shì dàxuéshēng.",
+          "english": "My son is a college student.",
+          "words": ["wǒ", "de", "ér zi", "shì", "dàxuéshēng"]
+        },
+        {
+          "chinese": "我的女儿是老师。",
+          "pinyin": "Wǒ de nǚér shì lǎoshī.",
+          "english": "My daughter is a teacher.",
+          "words": ["wǒ", "de", "nǚ ér", "shì", "lǎoshī"]
+        },
+        {
+          "chinese": "我喜欢我的家人。",
+          "pinyin": "Wǒ xǐhuan wǒ de jiārén.",
+          "english": "I like my family.",
+          "words": ["wǒ", "xǐhuan", "de"]
+        }
+      ]
+    },
+    {
+      "id": "at-the-restaurant",
+      "title": "At the Restaurant",
+      "titleChinese": "在饭馆吃饭",
+      "level": "beginner",
+      "wordCount": 20,
+      "sentences": [
+        {
+          "chinese": "我和妈妈去饭馆。",
+          "pinyin": "Wǒ hé māma qù fànguǎn.",
+          "english": "Mom and I go to the restaurant.",
+          "words": ["wǒ", "hé", "māma", "qù", "fànguǎn"]
+        },
+        {
+          "chinese": "这是饭馆。",
+          "pinyin": "Zhè shì fànguǎn.",
+          "english": "This is the restaurant.",
+          "words": ["zhè shì", "fànguǎn"]
+        },
+        {
+          "chinese": "我喜欢吃米饭。",
+          "pinyin": "Wǒ xǐhuan chī mǐfàn.",
+          "english": "I like to eat rice.",
+          "words": ["wǒ", "xǐhuan", "chī", "mǐfàn"]
+        },
+        {
+          "chinese": "妈妈喜欢吃菜。",
+          "pinyin": "Māma xǐhuan chī cài.",
+          "english": "Mom likes to eat vegetables.",
+          "words": ["māma", "xǐhuan", "chī", "cài"]
+        },
+        {
+          "chinese": "你喜欢吃豆腐吗？",
+          "pinyin": "Nǐ xǐhuan chī dòufu ma?",
+          "english": "Do you like to eat tofu?",
+          "words": ["nǐ", "xǐhuan", "chī", "dòufu"]
+        },
+        {
+          "chinese": "对，我喜欢。",
+          "pinyin": "Duì, wǒ xǐhuan.",
+          "english": "Yes, I like it.",
+          "words": ["duì", "wǒ", "xǐhuan"]
+        },
+        {
+          "chinese": "汤热不热？",
+          "pinyin": "Tāng rè bù rè?",
+          "english": "Is the soup hot?",
+          "words": ["tāng", "rè", "bù"]
+        },
+        {
+          "chinese": "汤很热。",
+          "pinyin": "Tāng hěn rè.",
+          "english": "The soup is very hot.",
+          "words": ["tāng", "rè"]
+        }
+      ]
+    },
+    {
+      "id": "morning-routine",
+      "title": "Morning Routine",
+      "titleChinese": "早上",
+      "level": "beginner",
+      "wordCount": 18,
+      "sentences": [
+        {
+          "chinese": "早上我喝咖啡。",
+          "pinyin": "Zǎoshang wǒ hē kāfēi.",
+          "english": "In the morning I drink coffee.",
+          "words": ["wǒ", "kāfēi"]
+        },
+        {
+          "chinese": "爸爸喜欢喝茶。",
+          "pinyin": "Bàba xǐhuan hē chá.",
+          "english": "Dad likes to drink tea.",
+          "words": ["bàba", "xǐhuan", "chá"]
+        },
+        {
+          "chinese": "妈妈常常吃粥。",
+          "pinyin": "Māma chángcháng chī zhōu.",
+          "english": "Mom often eats porridge.",
+          "words": ["māma", "chángcháng", "chī", "zhōu"]
+        },
+        {
+          "chinese": "你呢？",
+          "pinyin": "Nǐ ne?",
+          "english": "How about you?",
+          "words": ["nǐ ne"]
+        },
+        {
+          "chinese": "我喜欢吃米饭。",
+          "pinyin": "Wǒ xǐhuan chī mǐfàn.",
+          "english": "I like to eat rice.",
+          "words": ["wǒ", "xǐhuan", "chī", "mǐfàn"]
+        },
+        {
+          "chinese": "对不对？",
+          "pinyin": "Duì bu duì?",
+          "english": "Right?",
+          "words": ["duì bu duì"]
+        }
+      ]
+    },
+    {
+      "id": "going-to-school",
+      "title": "Going to School",
+      "titleChinese": "上课",
+      "level": "beginner",
+      "wordCount": 22,
+      "sentences": [
+        {
+          "chinese": "我是学生。",
+          "pinyin": "Wǒ shì xuéshēng.",
+          "english": "I am a student.",
+          "words": ["wǒ", "shì", "xuéshēng"]
+        },
+        {
+          "chinese": "我常常上课。",
+          "pinyin": "Wǒ chángcháng shàng kè.",
+          "english": "I often attend class.",
+          "words": ["wǒ", "chángcháng", "shàng kè"]
+        },
+        {
+          "chinese": "我的老师是中国人。",
+          "pinyin": "Wǒ de lǎoshī shì Zhōngguó rén.",
+          "english": "My teacher is Chinese.",
+          "words": ["wǒ", "de", "lǎoshī", "shì", "zhōngguó", "rén"]
+        },
+        {
+          "chinese": "她不是美国人。",
+          "pinyin": "Tā bù shì Měiguó rén.",
+          "english": "She is not American.",
+          "words": ["tā", "bù", "shì", "měiguó", "rén"]
+        },
+        {
+          "chinese": "我喜欢学英语。",
+          "pinyin": "Wǒ xǐhuan xué Yīngyǔ.",
+          "english": "I like to study English.",
+          "words": ["wǒ", "xǐhuan", "xué", "yīngyǔ"]
+        },
+        {
+          "chinese": "我也喜欢学数学。",
+          "pinyin": "Wǒ yě xǐhuan xué shùxué.",
+          "english": "I also like to study math.",
+          "words": ["wǒ", "xǐhuan", "xué", "shùxué"]
+        },
+        {
+          "chinese": "你喜欢音乐吗？",
+          "pinyin": "Nǐ xǐhuan yīnyuè ma?",
+          "english": "Do you like music?",
+          "words": ["nǐ", "xǐhuan", "yīnyuè"]
+        },
+        {
+          "chinese": "对，我喜欢音乐。",
+          "pinyin": "Duì, wǒ xǐhuan yīnyuè.",
+          "english": "Yes, I like music.",
+          "words": ["duì", "wǒ", "xǐhuan", "yīnyuè"]
+        }
+      ]
+    },
+    {
+      "id": "at-the-supermarket",
+      "title": "At the Supermarket",
+      "titleChinese": "去超市",
+      "level": "beginner",
+      "wordCount": 20,
+      "sentences": [
+        {
+          "chinese": "我和老婆去超市。",
+          "pinyin": "Wǒ hé lǎopó qù chāoshì.",
+          "english": "My wife and I go to the supermarket.",
+          "words": ["wǒ", "hé", "lǎopó", "qù", "chāoshì"]
+        },
+        {
+          "chinese": "超市很大。",
+          "pinyin": "Chāoshì hěn dà.",
+          "english": "The supermarket is very big.",
+          "words": ["chāoshì", "dà"]
+        },
+        {
+          "chinese": "我喜欢吃豆腐。",
+          "pinyin": "Wǒ xǐhuan chī dòufu.",
+          "english": "I like to eat tofu.",
+          "words": ["wǒ", "xǐhuan", "chī", "dòufu"]
+        },
+        {
+          "chinese": "老婆喜欢喝咖啡。",
+          "pinyin": "Lǎopó xǐhuan hē kāfēi.",
+          "english": "Wife likes to drink coffee.",
+          "words": ["lǎopó", "xǐhuan", "kāfēi"]
+        },
+        {
+          "chinese": "我常常吃菜和米饭。",
+          "pinyin": "Wǒ chángcháng chī cài hé mǐfàn.",
+          "english": "I often eat vegetables and rice.",
+          "words": ["wǒ", "chángcháng", "chī", "cài", "hé", "mǐfàn"]
+        },
+        {
+          "chinese": "你呢？你喜欢吃什么？",
+          "pinyin": "Nǐ ne? Nǐ xǐhuan chī shénme?",
+          "english": "How about you? What do you like to eat?",
+          "words": ["nǐ ne", "nǐ", "xǐhuan", "chī"]
+        }
+      ]
+    },
+    {
+      "id": "people-of-the-world",
+      "title": "People of the World",
+      "titleChinese": "世界的人",
+      "level": "beginner",
+      "wordCount": 16,
+      "sentences": [
+        {
+          "chinese": "他是中国人。",
+          "pinyin": "Tā shì Zhōngguó rén.",
+          "english": "He is Chinese.",
+          "words": ["tā", "shì", "zhōngguó", "rén"]
+        },
+        {
+          "chinese": "她是美国人。",
+          "pinyin": "Tā shì Měiguó rén.",
+          "english": "She is American.",
+          "words": ["tā", "shì", "měiguó", "rén"]
+        },
+        {
+          "chinese": "我的老师是日本人。",
+          "pinyin": "Wǒ de lǎoshī shì Rìběn rén.",
+          "english": "My teacher is Japanese.",
+          "words": ["wǒ", "de", "lǎoshī", "shì", "rìběn", "rén"]
+        },
+        {
+          "chinese": "你是韩国人吗？",
+          "pinyin": "Nǐ shì Hánguó rén ma?",
+          "english": "Are you Korean?",
+          "words": ["nǐ", "shì", "hánguó", "rén"]
+        },
+        {
+          "chinese": "不，我不是韩国人。",
+          "pinyin": "Bù, wǒ bù shì Hánguó rén.",
+          "english": "No, I am not Korean.",
+          "words": ["bù", "wǒ", "shì", "hánguó", "rén"]
+        },
+        {
+          "chinese": "我是中国人。",
+          "pinyin": "Wǒ shì Zhōngguó rén.",
+          "english": "I am Chinese.",
+          "words": ["wǒ", "shì", "zhōngguó", "rén"]
         }
       ]
     },
     {
       "id": "tea-time",
-      "title": "Tea Time",
-      "titleChinese": "喝茶",
+      "title": "Tea Time with Family",
+      "titleChinese": "和家人喝茶",
       "level": "beginner",
-      "wordCount": 6,
+      "wordCount": 18,
       "sentences": [
+        {
+          "chinese": "老公和老婆喝茶。",
+          "pinyin": "Lǎogōng hé lǎopó hē chá.",
+          "english": "Husband and wife drink tea.",
+          "words": ["lǎogōng", "hé", "lǎopó", "chá"]
+        },
         {
           "chinese": "老公热水。",
           "pinyin": "Lǎogōng rè shuǐ.",
@@ -47,154 +320,160 @@
           "words": ["lǎogōng", "rè", "shuǐ"]
         },
         {
-          "chinese": "老婆热茶。",
-          "pinyin": "Lǎopó rè chá.",
-          "english": "Wife heats tea.",
-          "words": ["lǎopó", "rè", "chá"]
+          "chinese": "水热不热？",
+          "pinyin": "Shuǐ rè bù rè?",
+          "english": "Is the water hot?",
+          "words": ["shuǐ", "rè", "bù"]
         },
         {
-          "chinese": "这是热茶。",
-          "pinyin": "Zhè shì rè chá.",
-          "english": "This is hot tea.",
-          "words": ["zhè shì", "rè", "chá"]
+          "chinese": "对，水很热。",
+          "pinyin": "Duì, shuǐ hěn rè.",
+          "english": "Yes, the water is very hot.",
+          "words": ["duì", "shuǐ", "rè"]
+        },
+        {
+          "chinese": "老婆喜欢热茶。",
+          "pinyin": "Lǎopó xǐhuan rè chá.",
+          "english": "Wife likes hot tea.",
+          "words": ["lǎopó", "xǐhuan", "rè", "chá"]
+        },
+        {
+          "chinese": "我也喜欢热茶。",
+          "pinyin": "Wǒ yě xǐhuan rè chá.",
+          "english": "I also like hot tea.",
+          "words": ["wǒ", "xǐhuan", "rè", "chá"]
+        },
+        {
+          "chinese": "你呢？",
+          "pinyin": "Nǐ ne?",
+          "english": "How about you?",
+          "words": ["nǐ ne"]
         }
       ]
     },
     {
-      "id": "the-student",
-      "title": "The Student",
-      "titleChinese": "学生",
+      "id": "at-the-bookstore",
+      "title": "At the Bookstore",
+      "titleChinese": "去书店",
       "level": "beginner",
-      "wordCount": 10,
+      "wordCount": 18,
       "sentences": [
         {
-          "chinese": "儿子是大学生。",
-          "pinyin": "Érzi shì dàxuéshēng.",
-          "english": "Son is a college student.",
-          "words": ["ér zi", "shì", "dàxuéshēng"]
+          "chinese": "我去书店。",
+          "pinyin": "Wǒ qù shūdiàn.",
+          "english": "I go to the bookstore.",
+          "words": ["wǒ", "qù", "shūdiàn"]
         },
         {
-          "chinese": "女儿是中学生。",
-          "pinyin": "Nǚér shì zhōngxuéshēng.",
-          "english": "Daughter is a middle school student.",
-          "words": ["nǚ ér", "shì", "zhōngxuéshēng"]
+          "chinese": "书店不大。",
+          "pinyin": "Shūdiàn bù dà.",
+          "english": "The bookstore is not big.",
+          "words": ["shūdiàn", "bù", "dà"]
         },
         {
-          "chinese": "老师不是学生。",
-          "pinyin": "Lǎoshī bù shì xuéshēng.",
-          "english": "Teacher is not a student.",
-          "words": ["lǎoshī", "bù", "shì", "xuéshēng"]
+          "chinese": "我喜欢学英语。",
+          "pinyin": "Wǒ xǐhuan xué Yīngyǔ.",
+          "english": "I like to study English.",
+          "words": ["wǒ", "xǐhuan", "xué", "yīngyǔ"]
         },
         {
-          "chinese": "学生常常学数学。",
-          "pinyin": "Xuéshēng chángcháng xué shùxué.",
-          "english": "Students often study math.",
-          "words": ["xuéshēng", "chángcháng", "xué", "shùxué"]
+          "chinese": "我常常去书店。",
+          "pinyin": "Wǒ chángcháng qù shūdiàn.",
+          "english": "I often go to the bookstore.",
+          "words": ["wǒ", "chángcháng", "qù", "shūdiàn"]
+        },
+        {
+          "chinese": "你喜欢书吗？",
+          "pinyin": "Nǐ xǐhuan shū ma?",
+          "english": "Do you like books?",
+          "words": ["nǐ", "xǐhuan"]
+        },
+        {
+          "chinese": "对，我喜欢。",
+          "pinyin": "Duì, wǒ xǐhuan.",
+          "english": "Yes, I like them.",
+          "words": ["duì", "wǒ", "xǐhuan"]
         }
       ]
     },
     {
-      "id": "at-the-restaurant",
-      "title": "At the Restaurant",
-      "titleChinese": "在饭馆",
-      "level": "beginner",
-      "wordCount": 9,
+      "id": "a-day-in-my-life",
+      "title": "A Day in My Life",
+      "titleChinese": "我的一天",
+      "level": "intermediate",
+      "wordCount": 35,
       "sentences": [
         {
-          "chinese": "这是饭馆。",
-          "pinyin": "Zhè shì fànguǎn.",
-          "english": "This is a restaurant.",
-          "words": ["zhè shì", "fànguǎn"]
+          "chinese": "我是大学生。",
+          "pinyin": "Wǒ shì dàxuéshēng.",
+          "english": "I am a college student.",
+          "words": ["wǒ", "shì", "dàxuéshēng"]
         },
         {
-          "chinese": "妈妈热米饭。",
-          "pinyin": "Māma rè mǐfàn.",
-          "english": "Mom heats rice.",
-          "words": ["māma", "rè", "mǐfàn"]
+          "chinese": "早上我吃粥和喝咖啡。",
+          "pinyin": "Zǎoshang wǒ chī zhōu hé hē kāfēi.",
+          "english": "In the morning I eat porridge and drink coffee.",
+          "words": ["wǒ", "chī", "zhōu", "hé", "kāfēi"]
         },
         {
-          "chinese": "爸爸热茶。",
-          "pinyin": "Bàba rè chá.",
-          "english": "Dad heats tea.",
-          "words": ["bàba", "rè", "chá"]
+          "chinese": "我常常上课。",
+          "pinyin": "Wǒ chángcháng shàng kè.",
+          "english": "I often attend class.",
+          "words": ["wǒ", "chángcháng", "shàng kè"]
         },
         {
-          "chinese": "水不热。",
-          "pinyin": "Shuǐ bù rè.",
-          "english": "The water is not hot.",
-          "words": ["shuǐ", "bù", "rè"]
-        }
-      ]
-    },
-    {
-      "id": "people-of-the-world",
-      "title": "People of the World",
-      "titleChinese": "人",
-      "level": "beginner",
-      "wordCount": 8,
-      "sentences": [
-        {
-          "chinese": "这是中国人。",
-          "pinyin": "Zhè shì Zhōngguó rén.",
-          "english": "This is a Chinese person.",
-          "words": ["zhè shì", "zhōngguó", "rén"]
+          "chinese": "我的老师是中国人。",
+          "pinyin": "Wǒ de lǎoshī shì Zhōngguó rén.",
+          "english": "My teacher is Chinese.",
+          "words": ["wǒ", "de", "lǎoshī", "shì", "zhōngguó", "rén"]
         },
         {
-          "chinese": "这是美国人。",
-          "pinyin": "Zhè shì Měiguó rén.",
-          "english": "This is an American person.",
-          "words": ["zhè shì", "měiguó", "rén"]
+          "chinese": "她很好。",
+          "pinyin": "Tā hěn hǎo.",
+          "english": "She is very good.",
+          "words": ["tā"]
         },
         {
-          "chinese": "这是日本人。",
-          "pinyin": "Zhè shì Rìběn rén.",
-          "english": "This is a Japanese person.",
-          "words": ["zhè shì", "rìběn", "rén"]
+          "chinese": "我喜欢学数学和英语。",
+          "pinyin": "Wǒ xǐhuan xué shùxué hé Yīngyǔ.",
+          "english": "I like to study math and English.",
+          "words": ["wǒ", "xǐhuan", "xué", "shùxué", "hé", "yīngyǔ"]
         },
         {
-          "chinese": "老师是中国人。",
-          "pinyin": "Lǎoshī shì Zhōngguó rén.",
-          "english": "The teacher is Chinese.",
-          "words": ["lǎoshī", "shì", "zhōngguó", "rén"]
-        }
-      ]
-    },
-    {
-      "id": "my-family",
-      "title": "My Family",
-      "titleChinese": "我的家人",
-      "level": "beginner",
-      "wordCount": 12,
-      "sentences": [
-        {
-          "chinese": "妈妈是医生。",
-          "pinyin": "Māma shì yīshēng.",
-          "english": "Mom is a doctor.",
-          "words": ["māma", "shì", "yīshēng"]
+          "chinese": "我也喜欢音乐。",
+          "pinyin": "Wǒ yě xǐhuan yīnyuè.",
+          "english": "I also like music.",
+          "words": ["wǒ", "xǐhuan", "yīnyuè"]
         },
         {
-          "chinese": "爸爸是律师。",
-          "pinyin": "Bàba shì lǜshī.",
-          "english": "Dad is a lawyer.",
-          "words": ["bàba", "shì", "lǜshī"]
+          "chinese": "中午我和妈妈去饭馆。",
+          "pinyin": "Zhōngwǔ wǒ hé māma qù fànguǎn.",
+          "english": "At noon mom and I go to a restaurant.",
+          "words": ["wǒ", "hé", "māma", "qù", "fànguǎn"]
         },
         {
-          "chinese": "儿子是大学生。",
-          "pinyin": "Érzi shì dàxuéshēng.",
-          "english": "Son is a college student.",
-          "words": ["ér zi", "shì", "dàxuéshēng"]
+          "chinese": "我喜欢吃米饭和菜。",
+          "pinyin": "Wǒ xǐhuan chī mǐfàn hé cài.",
+          "english": "I like to eat rice and vegetables.",
+          "words": ["wǒ", "xǐhuan", "chī", "mǐfàn", "hé", "cài"]
         },
         {
-          "chinese": "女儿不是学生。",
-          "pinyin": "Nǚér bù shì xuéshēng.",
-          "english": "Daughter is not a student.",
-          "words": ["nǚ ér", "bù", "shì", "xuéshēng"]
+          "chinese": "妈妈喜欢喝汤。",
+          "pinyin": "Māma xǐhuan hē tāng.",
+          "english": "Mom likes to drink soup.",
+          "words": ["māma", "xǐhuan", "tāng"]
         },
         {
-          "chinese": "女儿是老师。",
-          "pinyin": "Nǚér shì lǎoshī.",
-          "english": "Daughter is a teacher.",
-          "words": ["nǚ ér", "shì", "lǎoshī"]
+          "chinese": "汤很热，对不对？",
+          "pinyin": "Tāng hěn rè, duì bu duì?",
+          "english": "The soup is very hot, right?",
+          "words": ["tāng", "rè", "duì bu duì"]
+        },
+        {
+          "chinese": "对！",
+          "pinyin": "Duì!",
+          "english": "Right!",
+          "words": ["duì"]
         }
       ]
     }
