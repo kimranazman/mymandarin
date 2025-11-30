@@ -32,12 +32,6 @@ export function Flashcard({ word, onNext, onResult, showProgress }: FlashcardPro
     onNext();
   }, [onResult, onNext]);
 
-  const handleSkip = useCallback(() => {
-    setFlipped(false);
-    setShowAnswer(false);
-    onNext();
-  }, [onNext]);
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
