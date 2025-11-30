@@ -14,7 +14,6 @@ type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'read' | 'stats';
 
 function App() {
   const [view, setView] = useState<View>('home');
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [selectedWord, setSelectedWord] = useState<WordWithCategory | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -111,17 +110,8 @@ function App() {
 
   const handleViewChange = (newView: View, callback?: () => void) => {
     if (newView === view) return;
-
-    setIsTransitioning(true);
-
-    setTimeout(() => {
-      setView(newView);
-      if (callback) callback();
-
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 300);
-    }, 800);
+    setView(newView);
+    if (callback) callback();
   };
 
   const handleNavClick = (id: string) => {
@@ -159,8 +149,6 @@ function App() {
           </nav>
         </div>
       </header>
-
-      <div className={`page-transition-overlay ${isTransitioning ? 'active' : ''}`} />
 
       <main className="app-main">
         {view === 'home' && (
