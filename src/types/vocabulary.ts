@@ -48,13 +48,19 @@ export interface ReviewRecord {
 
 export type QuizMode = 'character-to-meaning' | 'meaning-to-character' | 'pinyin-to-character' | 'flashcard';
 
+export type QuizDifficulty = 'easy' | 'medium' | 'hard';
+
 export interface QuizSession {
   id: string;
   date: string;
   mode: QuizMode;
+  difficulty: QuizDifficulty;
+  category: string; // 'all' or specific category
   totalQuestions: number;
   correctAnswers: number;
   incorrectAnswers: number;
+  firstAttemptCorrect: number; // got it right on first try
+  secondAttemptCorrect: number; // needed second attempt
   duration: number; // seconds
   wordsReviewed: string[]; // pinyin list
 }

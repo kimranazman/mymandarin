@@ -7,7 +7,7 @@ import { CharacterBreakdown } from './components/CharacterBreakdown';
 import { Statistics } from './components/Statistics';
 import { Readables } from './components/Readables';
 import { IconHome, IconCards, IconQuiz, IconBook, IconStats, IconRead } from './components/Icons';
-import type { WordWithCategory, QuizMode } from './types/vocabulary';
+import type { WordWithCategory, QuizMode, QuizDifficulty } from './types/vocabulary';
 import './App.css';
 
 type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'read' | 'stats';
@@ -61,9 +61,13 @@ function App() {
 
   const handleQuizComplete = (session: {
     mode: QuizMode;
+    difficulty: QuizDifficulty;
+    category: string;
     totalQuestions: number;
     correctAnswers: number;
     incorrectAnswers: number;
+    firstAttemptCorrect: number;
+    secondAttemptCorrect: number;
     duration: number;
     wordsReviewed: string[];
   }) => {
@@ -252,7 +256,8 @@ function App() {
 
         {view === 'quiz' && (
           <Quiz
-            words={displayWords}
+            words={allWords}
+            categories={categories}
             onResult={handleQuizResult}
             onComplete={handleQuizComplete}
             onExit={() => handleViewChange('home')}
