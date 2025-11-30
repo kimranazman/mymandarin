@@ -1,7 +1,25 @@
 import { useState, useEffect } from 'react';
 import type { WordWithCategory } from '../types/vocabulary';
+import { useFlashlight } from '../hooks/useFlashlight';
 import { IconBook, IconBrain, IconCards } from './Icons';
 import './Quiz.css';
+
+interface QuizOptionProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+}
+
+function QuizOption({ className, children, ...props }: QuizOptionProps) {
+  const flashlight = useFlashlight();
+  return (
+    <button
+      className={`${className || ''} ${flashlight.className}`}
+      onMouseMove={flashlight.onMouseMove}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
 
 interface QuizProps {
   words: WordWithCategory[];
@@ -230,14 +248,14 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
           }
 
           return (
-            <button
+            <QuizOption
               key={option.pinyin}
               className={className}
               onClick={() => handleAnswer(option)}
               disabled={showResult}
             >
               {getAnswerDisplay(option)}
-            </button>
+            </QuizOption>
           );
         })}
       </div>
@@ -251,7 +269,7 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
               Incorrect. The answer was: {currentWord.characters} ({currentWord.pinyin}) - {currentWord.meaning}
             </span>
           )}
-          <button className="btn-next" onClick={handleNext}>
+          <button className="btn-next beam-border" onClick={handleNext}>
             {currentIndex + 1 >= quizWords.length ? 'See Results' : 'Next Question'}
           </button>
         </div>

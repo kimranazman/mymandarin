@@ -12,6 +12,7 @@ type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'struggle';
 
 function App() {
   const [view, setView] = useState<View>('home');
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [selectedWord, setSelectedWord] = useState<WordWithCategory | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -63,7 +64,7 @@ function App() {
   };
 
   const startQuiz = () => {
-    setView('quiz');
+    handleViewChange('quiz');
   };
 
   const formatCategory = (category: string) => {
@@ -85,14 +86,29 @@ function App() {
     { id: 'struggle', label: 'Practice', icon: IconBrain, badge: struggleWords.length },
   ];
 
+  const handleViewChange = (newView: View, callback?: () => void) => {
+    if (newView === view) return;
+    
+    setIsTransitioning(true);
+    
+    setTimeout(() => {
+      setView(newView);
+      if (callback) callback();
+      
+      // Wait for view render then reverse transition
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 300);
+    }, 800); // Wait for circle expand
+  };
+
   const handleNavClick = (id: string) => {
     if (id === 'flashcards') {
-      setCurrentCardIndex(0);
-      setView('flashcards');
+      handleViewChange('flashcards', () => setCurrentCardIndex(0));
     } else if (id === 'quiz') {
       startQuiz();
     } else {
-      setView(id as View);
+      handleViewChange(id as View);
     }
   };
 
@@ -100,7 +116,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <div className="logo" onClick={() => setView('home')}>
+          <div className="logo" onClick={() => handleViewChange('home')}>
             <h1>My Mandarin</h1>
           </div>
           
@@ -121,6 +137,8 @@ function App() {
           </nav>
         </div>
       </header>
+
+      <div className={`page-transition-overlay ${isTransitioning ? 'active' : ''}`} />
 
       <main className="app-main">
         {view === 'home' && (
@@ -146,7 +164,7 @@ function App() {
             </div>
 
             <div className="home-actions">
-              <button className="btn-primary" onClick={() => setView('flashcards')}>
+              <button className="btn-primary beam-border" onClick={() => handleViewChange('flashcards')}>
                 Start Flashcards
               </button>
               <button className="btn-secondary" onClick={startQuiz}>
@@ -162,9 +180,10 @@ function App() {
                     key={category}
                     className="category-chip"
                     onClick={() => {
-                      setSelectedCategory(category);
-                      setCurrentCardIndex(0);
-                      setView('flashcards');
+                      handleViewChange('flashcards', () => {
+                        setSelectedCategory(category);
+                        setCurrentCardIndex(0);
+                      });
                     }}
                   >
                     {formatCategory(category)} ({getWordsByCategory(category).length})
@@ -211,7 +230,7 @@ function App() {
           <Quiz
             words={displayWords}
             onResult={handleQuizResult}
-            onExit={() => setView('home')}
+            onExit={() => handleViewChange('home')}
           />
         )}
 

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { WordWithCategory } from '../types/vocabulary';
+import { useFlashlight } from '../hooks/useFlashlight';
 import './Flashcard.css';
 
 interface FlashcardProps {
@@ -12,6 +13,7 @@ interface FlashcardProps {
 export function Flashcard({ word, onNext, onResult, showProgress }: FlashcardProps) {
   const [flipped, setFlipped] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
+  const flashlight = useFlashlight();
 
   const handleFlip = useCallback(() => {
     if (!flipped) {
@@ -66,13 +68,17 @@ export function Flashcard({ word, onNext, onResult, showProgress }: FlashcardPro
         </div>
       )}
 
-      <div className={`flashcard ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+      <div
+        className={`flashcard ${flipped ? 'flipped' : ''}`}
+        onClick={handleFlip}
+        onMouseMove={flashlight.onMouseMove}
+      >
         <div className="flashcard-inner">
-          <div className="flashcard-front">
+          <div className={`flashcard-front ${flashlight.className}`}>
             <span className="character">{word.characters}</span>
             <span className="hint">Click or Press Space to reveal</span>
           </div>
-          <div className="flashcard-back">
+          <div className={`flashcard-back ${flashlight.className}`}>
             <span className="character-small">{word.characters}</span>
             <span className="pinyin">{word.pinyin}</span>
             <span className="meaning">{word.meaning}</span>
