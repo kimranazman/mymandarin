@@ -23,7 +23,15 @@ function QuizOption({ className, children, ...props }: QuizOptionProps) {
 
 interface QuizProps {
   words: WordWithCategory[];
-  onResult: (pinyin: string, correct: boolean) => void;
+  onResult: (pinyin: string, correct: boolean, mode: QuizMode) => void;
+  onComplete: (session: {
+    mode: QuizMode;
+    totalQuestions: number;
+    correctAnswers: number;
+    incorrectAnswers: number;
+    duration: number;
+    wordsReviewed: string[];
+  }) => void;
   onExit: () => void;
 }
 
@@ -39,7 +47,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function Quiz({ words, onResult, onExit }: QuizProps) {
+export function Quiz({ words, onResult, onComplete, onExit }: QuizProps) {
   const [phase, setPhase] = useState<QuizPhase>('selection');
   const [quizMode, setQuizMode] = useState<QuizMode>('character-to-meaning');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,6 +56,8 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
   const [options, setOptions] = useState<WordWithCategory[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [quizWords, setQuizWords] = useState<WordWithCategory[]>([]);
+  const [startTime, setStartTime] = useState<number>(0);
+  const [reviewedWords, setReviewedWords] = useState<string[]>([]);
 
   // Initialize quiz with shuffled words
   useEffect(() => {
@@ -71,6 +81,8 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
     setScore({ correct: 0, incorrect: 0 });
     setCurrentIndex(0);
     setQuizWords(shuffleArray(words));
+    setStartTime(Date.now());
+    setReviewedWords([]);
     setPhase('playing');
   };
 
@@ -82,7 +94,10 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
     setShowResult(true);
 
     const isCorrect = answer.pinyin === currentWord.pinyin;
-    onResult(currentWord.pinyin, isCorrect);
+    onResult(currentWord.pinyin, isCorrect, quizMode);
+
+    // Track reviewed words
+    setReviewedWords(prev => [...prev, currentWord.pinyin]);
 
     setScore(prev => ({
       correct: isCorrect ? prev.correct + 1 : prev.correct,
@@ -92,6 +107,16 @@ export function Quiz({ words, onResult, onExit }: QuizProps) {
 
   const handleNext = () => {
     if (currentIndex + 1 >= quizWords.length) {
+      // Record the quiz session
+      const duration = Math.round((Date.now() - startTime) / 1000);
+      onComplete({
+        mode: quizMode,
+        totalQuestions: quizWords.length,
+        correctAnswers: score.correct + (selectedAnswer === quizWords[currentIndex]?.pinyin ? 1 : 0),
+        incorrectAnswers: score.incorrect + (selectedAnswer !== quizWords[currentIndex]?.pinyin ? 1 : 0),
+        duration,
+        wordsReviewed: [...reviewedWords, quizWords[currentIndex]?.pinyin].filter(Boolean),
+      });
       setPhase('results');
     } else {
       setCurrentIndex(prev => prev + 1);

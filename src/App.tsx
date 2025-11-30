@@ -4,11 +4,12 @@ import { Flashcard } from './components/Flashcard';
 import { Quiz } from './components/Quiz';
 import { WordList } from './components/WordList';
 import { CharacterBreakdown } from './components/CharacterBreakdown';
-import { IconHome, IconCards, IconQuiz, IconBook, IconBrain } from './components/Icons';
-import type { WordWithCategory } from './types/vocabulary';
+import { Statistics } from './components/Statistics';
+import { IconHome, IconCards, IconQuiz, IconBook, IconStats } from './components/Icons';
+import type { WordWithCategory, QuizMode } from './types/vocabulary';
 import './App.css';
 
-type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'struggle';
+type View = 'home' | 'flashcards' | 'quiz' | 'words' | 'stats';
 
 function App() {
   const [view, setView] = useState<View>('home');
@@ -22,14 +23,19 @@ function App() {
     getWordsByCategory,
     getCategories,
     getStruggleWords,
+    getWordsForReview,
     updateProgress,
     getWordProgress,
+    getStatistics,
+    recordQuizSession,
     resetProgress,
   } = useVocabulary();
 
   const allWords = getAllWords();
   const categories = getCategories();
   const struggleWords = getStruggleWords();
+  const wordsForReview = getWordsForReview();
+  const statistics = getStatistics();
 
   const getDisplayWords = () => {
     if (selectedCategory) {
@@ -46,17 +52,27 @@ function App() {
 
   const handleFlashcardResult = (correct: boolean) => {
     const word = displayWords[currentCardIndex];
-    updateProgress(word.pinyin, correct);
+    updateProgress(word.pinyin, correct, 'flashcard');
   };
 
-  const handleQuizResult = (pinyin: string, correct: boolean) => {
-    updateProgress(pinyin, correct);
+  const handleQuizResult = (pinyin: string, correct: boolean, mode: QuizMode) => {
+    updateProgress(pinyin, correct, mode);
+  };
+
+  const handleQuizComplete = (session: {
+    mode: QuizMode;
+    totalQuestions: number;
+    correctAnswers: number;
+    incorrectAnswers: number;
+    duration: number;
+    wordsReviewed: string[];
+  }) => {
+    recordQuizSession(session);
   };
 
   const findRelatedWords = (word: WordWithCategory): WordWithCategory[] => {
     return allWords.filter((w) => {
       if (w.pinyin === word.pinyin) return false;
-      // Check if they share any characters
       const chars1 = word.characters.split('');
       const chars2 = w.characters.split('');
       return chars1.some((c) => chars2.includes(c));
@@ -64,6 +80,11 @@ function App() {
   };
 
   const startQuiz = () => {
+    handleViewChange('quiz');
+  };
+
+  const startReviewSession = () => {
+    // Start quiz with words that are due for review
     handleViewChange('quiz');
   };
 
@@ -80,26 +101,25 @@ function App() {
 
   const navItems: NavItem[] = [
     { id: 'home', label: 'Home', icon: IconHome },
-    { id: 'flashcards', label: 'Flashcards', icon: IconCards },
+    { id: 'flashcards', label: 'Cards', icon: IconCards },
     { id: 'quiz', label: 'Quiz', icon: IconQuiz },
     { id: 'words', label: 'Library', icon: IconBook },
-    { id: 'struggle', label: 'Practice', icon: IconBrain, badge: struggleWords.length },
+    { id: 'stats', label: 'Stats', icon: IconStats, badge: wordsForReview.length > 0 ? wordsForReview.length : undefined },
   ];
 
   const handleViewChange = (newView: View, callback?: () => void) => {
     if (newView === view) return;
-    
+
     setIsTransitioning(true);
-    
+
     setTimeout(() => {
       setView(newView);
       if (callback) callback();
-      
-      // Wait for view render then reverse transition
+
       setTimeout(() => {
         setIsTransitioning(false);
       }, 300);
-    }, 800); // Wait for circle expand
+    }, 800);
   };
 
   const handleNavClick = (id: string) => {
@@ -119,7 +139,7 @@ function App() {
           <div className="logo" onClick={() => handleViewChange('home')}>
             <h1>My Mandarin</h1>
           </div>
-          
+
           <nav className="desktop-nav">
             {navItems.map((item) => (
               <button
@@ -154,12 +174,12 @@ function App() {
                 <span className="stat-label">Words</span>
               </div>
               <div className="stat-card">
-                <span className="stat-number">{categories.length}</span>
-                <span className="stat-label">Categories</span>
+                <span className="stat-number">{statistics.masteredCount}</span>
+                <span className="stat-label">Mastered</span>
               </div>
               <div className="stat-card">
-                <span className="stat-number">{struggleWords.length}</span>
-                <span className="stat-label">Need Practice</span>
+                <span className="stat-number">{wordsForReview.length}</span>
+                <span className="stat-label">Due Today</span>
               </div>
             </div>
 
@@ -171,6 +191,20 @@ function App() {
                 Take a Quiz
               </button>
             </div>
+
+            {struggleWords.length > 0 && (
+              <div className="struggle-alert">
+                <p>
+                  You have <strong>{struggleWords.length} words</strong> that need extra practice!
+                </p>
+                <button onClick={() => {
+                  setSelectedCategory(null);
+                  handleViewChange('flashcards');
+                }}>
+                  Practice Now
+                </button>
+              </div>
+            )}
 
             <div className="categories-section">
               <h3>Categories</h3>
@@ -230,6 +264,7 @@ function App() {
           <Quiz
             words={displayWords}
             onResult={handleQuizResult}
+            onComplete={handleQuizComplete}
             onExit={() => handleViewChange('home')}
           />
         )}
@@ -243,12 +278,10 @@ function App() {
           />
         )}
 
-        {view === 'struggle' && (
-          <WordList
-            words={struggleWords}
-            title="Words That Need Practice"
-            getProgress={getWordProgress}
-            onWordClick={setSelectedWord}
+        {view === 'stats' && (
+          <Statistics
+            stats={statistics}
+            onStartReview={startReviewSession}
           />
         )}
       </main>

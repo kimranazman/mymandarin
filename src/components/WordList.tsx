@@ -54,7 +54,7 @@ export function WordList({ words, title, getProgress, onWordClick }: WordListPro
         <div className="word-list">
           {filteredWords.map((word) => {
             const progress = getProgress?.(word.pinyin);
-            const isStruggle = progress?.struggleWord;
+            const isStruggle = progress && progress.srsLevel <= 1 && progress.incorrectCount >= 2;
 
             return (
               <div
